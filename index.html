@@ -14,25 +14,29 @@
         .container {
             text-align: center;
         }
+        #content{
+            text-align: left;
+        }
         img {
             width: 500px;
             
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="container">
         <img src="wireframe.png" alt="Image">
-        <div id="content"></div>
+        <pre id="content"></pre>
     </div>
     <script>
-        fetch('text.md')
+        fetch('text2.md')
         .then(response => response.text())
         .then(data => {
             document.getElementById('content').innerHTML = data;
         });
     
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
 </body>
 </html>
